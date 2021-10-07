@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd%22%3E" >
+    <persistence-unit name="mydbconnect" transaction-type="RESOURCE_LOCAL">
+    	<class>javajpa.model.Customer</class>
+    	<class>javajpa.model.Item</class>
+    	<class>javajpa.model.Orders</class>
+    	<class>javajpa.model.Product</class>
+     
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://202.28.34.197/dw64_62011212131"/>
+            <property name="javax.persistence.jdbc.user" value="dw64_62011212131"/>
+            <property name="javax.persistence.jdbc.password" value="62011212131@csmsu"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+        </properties>
+    </persistence-unit>
+</persistence>
