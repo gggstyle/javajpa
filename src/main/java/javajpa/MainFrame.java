@@ -154,7 +154,6 @@ public class MainFrame extends JFrame {
 		btnNewButton_3.setIcon(new ImageIcon(MainFrame.class.getResource("/javajpa/icon/delete.png")));
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
 				int selectRow = table.getSelectedRowCount();
 				if (selectRow == 1) {
 					ProductRepository repository = new ProductRepository();
@@ -180,7 +179,7 @@ public class MainFrame extends JFrame {
 					}
 				} else {
 					JOptionPane.showMessageDialog(null, "กรุณาเลือกข้อมูล");
-					;
+					
 				}
 
 			}
