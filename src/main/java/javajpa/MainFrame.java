@@ -158,7 +158,8 @@ public class MainFrame extends JFrame {
 				if (selectRow == 1) {
 					ProductRepository repository = new ProductRepository();
 					int selected = table.getSelectedRow();
-					int id = (int) table.getModel().getValueAt(selected, 0);
+					//int id = (int)table.getModel().getValueAt(selected, 0);
+					int id = (Integer) table.getModel().getValueAt(selected,0);
 					int affected = repository.deleteProduct(id);
 					if (affected > 0) {
 
@@ -197,7 +198,7 @@ public class MainFrame extends JFrame {
 					ProductRepository repository = new ProductRepository();
 					int selected = table.getSelectedRow();
 					if (selected > 0) {
-						int pid = (int) table.getModel().getValueAt(selected, 0);
+						int pid = (Integer)table.getModel().getValueAt(selected, 0);
 						frame.setPid(pid);
 						frame.setLocationRelativeTo(null);
 						frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
